@@ -1,0 +1,88 @@
+def maximum(a, b, c):
+ 
+    if (a >= b) and (a >= c):
+        largest = a
+ 
+    elif (b >= a) and (b >= c):
+        largest = b
+    else:
+        largest = c
+         
+    return largest
+a = 10
+b = 14
+c = 12
+print(maximum(a, b, c))
+
+def GetRate(rates):
+    RatesList = []
+    for rate in rates.split(' '):
+        RatesList.append(int(rate))
+    print(str(RatesList[0]) + ' ' + str(RatesList[-1]))
+    RatesList.remove(RatesList[0])
+    RatesList.remove(RatesList[-1])
+    return sum(RatesList)/ len(RatesList);
+
+rates = input()
+print('%.2f' % GetRate(rates))
+
+def calculate_lcm(x,y):
+    if x>y:
+        greater = x
+    else:
+        greater = y
+    while(True):
+        if((greater % x ==0) and(greater % y ==0)):
+            lcm = greater
+            break
+        greater += 1
+    return lsm 
+    num1 = int(input())
+    num2 = int(input())
+    print(calculate_lcm(x,y))
+    #ввод целых чисел
+a = int(input())
+b = int(input())
+ 
+# Пока какое-нибудь из двух числе не будет равно 0,
+while a != 0 and b != 0:
+    # сравнивать их между собой.
+    # Если первое число больше второго,
+    if a > b:
+        # то находить остаток от деления его на второе число 
+        # и присваивать его первой переменной
+        a = a % b
+    # Иначе (когда второе число больше первого)
+    else:
+        # присваивать второй переменной остаток от деления 
+        # нацело второго числа на первое
+        b = b % a
+ 
+# Одно из чисел содержит 0, а другое - НОД, но какое - неизвестно.
+# Проще их сложить, чем писать конструкцию if-else
+gcd = a + b
+print(gcd)
+
+n = int(input("Введите число:"))
+def col(n):
+    count = 0
+    while(n > 0):
+        count = count + 1
+        n = n // 10
+    return print("Количество цифр равно:", count)
+print(col(n))
+
+n1 = int(input("Введите целое число: "))
+n2 = 0
+ 
+while n1 > 0:
+    # находим остаток - последнюю цифру
+    digit = n1 % 10
+    # делим нацело - удаляем последнюю цифру
+    n1 = n1 // 10
+    # увеличиваем разрядность второго числа
+    n2 = n2 * 10
+    # добавляем очередную цифру
+    n2 = n2 + digit  
+ 
+print('"Обратное" ему число:', n2)
