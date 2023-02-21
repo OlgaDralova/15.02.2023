@@ -1,0 +1,68 @@
+a=int(input())
+b=int(input())
+def function(a,b):
+    d=a+b
+    print(d)
+print(function(a,b))
+
+a=[1,2,3,4,5]
+def dmax(a):
+    f=max(a)
+    print(f)
+print(dmax(a))
+
+def count_vowels(txt):
+    return len([letter for letter in txt if letter.lower() in 'aeiou'])
+print(count_vowels('aeiou'))
+
+import collections
+
+s1 = "Army"
+s2 = "Mary"
+s3 = "Zary"
+
+def anagram(s1,s2):
+  return collections.Counter(s1.lower()) == collections.Counter(s2.lower())
+
+print(anagram(s1,s2))def Election(x, y, z):
+    if x + y + z >= 2:
+        return 1
+    elif x + y + z < 2:
+        return 0
+x = int(input())
+y = int(input())
+z = int(input())
+print(Election(x, y, z))
+
+print (anagram(s1, s3))
+
+def Palindrome_test_string(input_str):
+    lower = input_str.lower()       # Store this to avoid doing it twice
+    return lower == lower[::-1]
+
+print(Palindrome_test_string('abccbA'))
+
+def fac(n):
+    if n == 0:
+        return 1
+    return fac(n-1) * n
+ 
+ 
+print(fac(5))
+
+
+class Square:
+    def __init__(self, length):
+        self.length = length
+        self.current = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current >= self.length:
+            raise StopIteration
+
+        self.current += 1
+        return self.current ** 2
+
