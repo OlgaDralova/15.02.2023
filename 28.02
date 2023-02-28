@@ -1,0 +1,66 @@
+list1=[1,2,3,4,5]
+list2=[3,4,5,6,7]
+def list12(list1, list2):
+    for i in list1:
+        if i in list2:
+            return True
+        else:
+            return False
+print(list12(list1, list2))
+
+
+class Square:
+    def __init__(self, length):
+        self.length = length
+        self.current = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current >= self.length:
+            raise StopIteration
+
+        self.current += 1
+        return self.current ** 2
+        
+        
+        def count_vowels(txt):
+    return len([letter for letter in txt if letter.lower() in 'aeiou'])
+print(count_vowels('aeiou'))
+
+
+a=int(input())
+b=int(input())
+def function(a,b):
+    d=a+b
+    print(d)
+print(function(a,b))
+
+
+dictA = {'asa': 11, 'emma': 19, 'eric' : 21}
+
+dictB = {'millie': 46, 'finn': 23, 'noah' : 18}
+
+dictA.update(dictB)
+ 
+print('Updated dictionary A :')
+print(dictA)
+
+
+a=[1,2,3,4,5]
+def dmax(a):
+    f=max(a)
+    print(f)
+print(dmax(a))
+
+
+import collections
+
+s1 = "Army"
+s2 = "Mary"
+s3 = "Zary"
+
+def anagram(s1,s2):
+  return collections.Counter(s1.lower()) == collections.Counter(s2.lower())
+
