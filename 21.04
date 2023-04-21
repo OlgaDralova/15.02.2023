@@ -1,0 +1,73 @@
+import re
+
+s = input()
+lst = re.findall(r'(?<=[QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm])[aeiouAEIOU]{2,}(?=[QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm])', s)
+
+if len(lst) > 0:
+    for element in lst:
+        print(element)
+else:
+    print(-1)
+
+
+import re
+text = """<p><strong><em>Читайте также: <a href="https://regnum.ru/news/economy/2527650.html" target="_blank">Набиуллина рассказала, как сделать рубль «привлекательным»</a></em></strong></p>"""
+new_text = ''.join(re.findall('>([^>]+)<', text))
+print(new_text)
+
+
+import re
+
+result = re.match(r'^(\d+)(0*)$', '102300').groups()
+('102300', '')
+
+print(result)
+
+import re
+result = re.match(r'^(\d+?)(0*)$', '102300').groups()
+('102300', '')
+
+print(result)
+
+
+import re
+  
+def validating_name(name):
+  
+    # RegexObject = re.compile( Regular expression, flag )
+    # Compiles a regular expression pattern into a regular expression object
+    regex_name = re.compile(r'^(Mr\.|Mrs\.|Ms\.) ([a-z]+)( [a-z]+)*( [a-z]+)*$', 
+              re.IGNORECASE)
+  
+    # RegexObject is matched with the desired 
+    # string using search function
+    # In case a match is found, search() returns
+    # MatchObject Instance
+    # If match is not found, it return None
+    res = regex_name.search(name)
+  
+    # If match is found, the string is valid
+    if res: print("Valid")
+          
+    # If match is not found, string is invalid
+    else: print("Invalid")
+  
+# Driver Code
+validating_name('Mr. Albus Severus Potter')
+validating_name('Lily and Mr. Harry Potter')
+validating_name('Mr. Cedric')
+validating_name('Mr. sirius black')
+
+
+import re
+
+result = re.match(r'^(\d+)(0*)$', '102300').groups()
+('102300', '')
+
+print(result)
+
+import re
+result = re.match(r'^(\d+?)(0*)$', '102300').groups()
+('102300', '')
+
+print(result)
